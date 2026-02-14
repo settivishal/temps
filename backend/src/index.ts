@@ -8,8 +8,8 @@ app.use(cors({
 }));
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("Backend running");
+app.get("/api/health", (req, res) => {
+  res.json("Backend running");
 });
 
 const PORT = 5173;
