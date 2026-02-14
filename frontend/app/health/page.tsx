@@ -6,7 +6,7 @@ export default function TestBackend() {
   const [data, setData] = useState<string>("");
 
   useEffect(() => {
-    fetch("http://localhost:5173/api/test") // your backend URL
+    fetch("http://localhost:5173/api/health") // your backend URL
       .then((res) => res.json())
       .then((json) => setData(json.message))
       .catch((err) => setData("Error: " + err.message));
